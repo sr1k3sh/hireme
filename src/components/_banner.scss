@@ -1,0 +1,103 @@
+.banner{
+    $self:&;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 100vh;
+    opacity: 0;
+    &.add{
+        animation: fadeIn 0.8s 0.3s ease-in-out forwards;
+        #{$self}__slogan-wrapper{
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: leftSlide 0.8s 0.3s ease-in-out forwards;
+        }
+        #{$self}__slogan-img{
+            opacity: 0;
+            transform: translateX(100px);
+            animation: rightSlide 0.8s 0.3s ease-in-out forwards;
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        flex-direction: row;
+        padding: 3rem;
+    }
+    &__slogan-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @include media-breakpoint-up(sm){
+            width: 50%;
+        }
+    }
+
+    &__h1{
+        @extend %slogan;
+        color: #6b62ff;
+        font-size: 4.5rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        
+    }
+
+    &__p{
+        font-weight: bold;
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__button{
+        padding: 1rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        &--outline{
+            @extend %outline;
+        }
+    }
+
+    &__main-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 200px;
+    }
+
+    &__main-links{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    &__button-link{
+        width: 32px;
+        height:32px;
+        padding: 0;
+        border-radius: 50%;
+        & svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__slogan-img{
+        display: none;
+        @include media-breakpoint-up(sm){
+            display: block;
+            width: 50%;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+
+    &__button{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap');
+$font-family-base:'Manrope', sans-serif;
+$blue:#6b62ff;
+$light-white: #FBFBFF;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+:root{
+    --bs-body-color:#262534;
+}
+
+.btn-primary{
+    color: $light-white;
+}
+.App{
+    background-color: #6a61ff38;
+}
+
+%slogan{
+    font-weight: bold;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+%outline{
+    padding: 1rem;
+    font-weight: bold;
+    border-width: 3px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes leftSlide {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes rightSlide {
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.rikesh{
+    &__header{
+        @extend %slogan;
+        font-size: 3rem;
+        font-weight: 800;
+        text-align: center;
+        &.add{
+            opacity: 0;
+            animation: fadeIn 1s 0.3s ease-in-out forwards;
+        }
+    }
+
+    &__btn{
+        font-weight: bold;
+        padding: 1rem;
+        &.add{
+            opacity: 0;
+            animation: fadeIn 1s 0.3s ease-in-out forwards;
+        }
+    }
+
+    &__btn-outline{
+        @extend %outline;
+        &.add{
+            opacity: 0;
+            animation: fadeIn 1s 0.3s ease-in-out forwards;
+        }
+    }
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 3rem;
+        margin: 0 auto;
+    }
+
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__h3{
+        @extend %slogan;
+        color: #fd6583;
+    }
+}
+@import './components/banner';
+@import './components//personal';
+@import './components/service';
+@import './components//toolcard';
+
+
