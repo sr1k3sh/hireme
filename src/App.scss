@@ -62,26 +62,26 @@ $light-white: #FBFBFF;
         font-size: 3rem;
         font-weight: 800;
         text-align: center;
+        opacity: 0;
         &.add{
-            opacity: 0;
-            animation: fadeIn 1s 0.3s ease-in-out forwards;
+            animation: fadeIn 0.8s ease-in-out forwards;
         }
     }
 
     &__btn{
         font-weight: bold;
         padding: 1rem;
+        opacity: 0;
         &.add{
-            opacity: 0;
-            animation: fadeIn 1s 0.3s ease-in-out forwards;
+            animation: fadeIn 0.8s ease-in-out forwards;
         }
     }
 
     &__btn-outline{
         @extend %outline;
+        opacity: 0;
         &.add{
-            opacity: 0;
-            animation: fadeIn 1s 0.3s ease-in-out forwards;
+            animation: fadeIn 0.8s ease-in-out forwards;
         }
     }
 

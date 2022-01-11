@@ -7,16 +7,16 @@
     min-height: 100vh;
     opacity: 0;
     &.add{
-        animation: fadeIn 0.8s 0.3s ease-in-out forwards;
+        animation: fadeIn 0.8s ease-in-out forwards;
         #{$self}__slogan-wrapper{
             opacity: 0;
             transform: translateX(-100px);
-            animation: leftSlide 0.8s 0.3s ease-in-out forwards;
+            animation: leftSlide 0.8s ease-in-out forwards;
         }
         #{$self}__slogan-img{
             opacity: 0;
             transform: translateX(100px);
-            animation: rightSlide 0.8s 0.3s ease-in-out forwards;
+            animation: rightSlide 0.8s ease-in-out forwards;
         }
     }
     @include media-breakpoint-up(sm) {

@@ -19,3 +19,14 @@
         font-weight: bold;
     }
 }
+
+
+.mytool-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    &.add{
+        animation: fadeIn 0.8s ease-in-out forwards;
+    }
+}

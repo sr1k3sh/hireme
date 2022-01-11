@@ -6,15 +6,13 @@
     gap: 1rem;
 
     &.add{
-        #{$self}__text-wrapper{
-            opacity: 0;
+        #{$self}__text-wrapper{    
             left: -100px;
-            animation: leftSlide 0.8s 0.3s ease-in-out forwards;
+            animation: leftSlide 0.8s ease-in-out forwards;
         }
         #{$self}__image-wrapper{
-            opacity: 0;
             left: 100px;
-            animation: rightSlide 0.8s 0.3s ease-in-out forwards;
+            animation: rightSlide 0.8s ease-in-out forwards;
         }
     }
 
@@ -23,14 +21,12 @@
             flex-direction: row-reverse;
             &.add{
                 #{$self}__text-wrapper{
-                    opacity: 0;
                     left: 100px;
-                    animation: rightSlide 0.8s 0.3s ease-in-out forwards;
+                    animation: rightSlide 0.8s ease-in-out forwards;
                 }
                 #{$self}__image-wrapper{
-                    opacity: 0;
                     left: -100px;
-                    animation: leftSlide 0.8s 0.3s ease-in-out forwards;
+                    animation: leftSlide 0.8s ease-in-out forwards;
                 }
             }
         }
@@ -39,6 +35,7 @@
         gap: 3rem;
     }
     &__text-wrapper,&__image-wrapper{
+        opacity: 0;
         @include media-breakpoint-up(sm){
             width: 50%;
         }
