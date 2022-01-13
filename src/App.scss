@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap');
 $font-family-base:'Manrope', sans-serif;
-$blue:#6b62ff;
-$light-white: #FBFBFF;
+$blue:#151983;
+$light-white: #B6CBE1;
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 :root{
-    --bs-body-color:#262534;
+    --bs-body-color:#001F3D;
 }
 
 .btn-primary{
     color: $light-white;
 }
 .App{
-    background-color: #6a61ff38;
+    background-color: #B6CBE1;
 }
 
 %slogan{
     font-weight: bold;
-    font-family: 'PT Sans Caption', sans-serif;
+    // font-family: 'PT Sans Caption', sans-serif;
 }
 
 %outline{
