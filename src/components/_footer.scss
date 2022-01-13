@@ -1,0 +1,53 @@
+.rikesh-footer{
+    background: #1e1c34;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding:3rem 1.5rem;
+        @include media-breakpoint-up(md){
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+    &__linkicons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    &__h4{
+        font-weight: bold;
+        color: $light-white;
+    }
+    &__p{
+        color: $light-white;
+    }
+
+    &__nav{
+        color: $light-white;
+        text-align: left;
+        @include media-breakpoint-up(md){
+            text-align: right;
+            width: 33%;
+        }
+    }
+
+    &__span{
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    &__quicklinks{
+        list-style: none;
+        padding: 0;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 1rem;
+        @include media-breakpoint-up(md){
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+    }
+}

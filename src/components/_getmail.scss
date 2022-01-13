@@ -1,0 +1,14 @@
+.getmail{
+    &__container{
+        background: linear-gradient(0deg, #1e1c33 50%, #dedcff 50%);
+    }
+    &__form{
+        backdrop-filter: blur(13px);
+        background: #eae9fbe6;
+        padding: 6rem 7rem;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

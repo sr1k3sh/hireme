@@ -7,7 +7,17 @@ function Banner(){
     const bannerRef = useRef();
     useEffect(() => {
         iteraction(bannerRef.current)
-    }, [])
+    }, []);
+
+    const onServiceClick = (e) =>{
+        e.preventDefault();
+        const myservices = document.getElementsByClassName("myservices")[0];
+        myservices.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
     return(
         <React.Fragment>
             <section className="container-xl">
@@ -20,8 +30,8 @@ function Banner(){
                         Always.</p>
                         <div className="banner__buttons">
                             <div className="banner__main-buttons">
-                                <Button btnText='HIRE ME'></Button>
-                                <Button outline={true} btnText='VIEW SERVICES'></Button>
+                                <Button btnText='HIRE ME' ></Button>
+                                <Button outline={true} btnText='VIEW SERVICES' onClick={onServiceClick}></Button>
                             </div>
                             <div className="banner__main-links">
                                 <button className="btn banner__button-link">

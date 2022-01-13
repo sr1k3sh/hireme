@@ -7,6 +7,6 @@ export default function Button(props){
         iteraction(btnRef.current);
     })
     return(
-        <button ref={btnRef} className={props.outline?"btn btn-outline-primary rikesh__btn-outline":"btn btn-primary rikesh__btn"}>{props.btnText}</button>
+        <button onClick={props.onClick} ref={btnRef} className={props.outline?"btn btn-outline-primary rikesh__btn-outline":"btn btn-primary rikesh__btn"}>{props.btnText}</button>
     )
 }

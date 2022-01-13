@@ -63,6 +63,7 @@ $light-white: #FBFBFF;
         font-weight: 800;
         text-align: center;
         opacity: 0;
+        letter-spacing: 1.25px;
         &.add{
             animation: fadeIn 0.8s ease-in-out forwards;
         }
@@ -112,5 +113,23 @@ $light-white: #FBFBFF;
 @import './components//personal';
 @import './components/service';
 @import './components//toolcard';
+@import './components/getmail';
+@import './components/footer';
 
 
+.form-control{
+    padding: 0.7rem 1rem;
+}
+.form-label{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.circle{
+    display:flex;
+    width: 50px;
+    height:50px;
+    position: absolute;
+    border-radius: 50%;
+    background: #fd6583;
+    transition: all 2s ease-in-out;
+}
