@@ -1,20 +1,23 @@
+import { BrowserRouter as Router,
+  useRoutes, } from 'react-router-dom';
 import './App.scss';
-import Banner from './components/Banner';
-import Footer from './components/Footer';
-import GetEmail from './components/GetEmail';
-import MyServices from './components/MyServices';
-import MyTool from './components/MyTool';
-import PersonalContainer from './components/PersonalContainer';
+import About from './pages/About';
+import Home from './pages/Home';
+
+const Routes = () =>{
+  let routes = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/about", element: <About></About>}
+  ]);
+  return routes;
+}
 
 function App() {
   return (
     <div className="App">
-      <Banner></Banner>
-      <PersonalContainer></PersonalContainer>
-      <MyServices></MyServices>
-      <MyTool></MyTool>
-      <GetEmail></GetEmail>
-      <Footer></Footer>
+      <Router>
+        <Routes></Routes>
+      </Router>
     </div>
   );
 }

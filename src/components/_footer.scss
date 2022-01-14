@@ -17,14 +17,14 @@
     }
     &__h4{
         font-weight: bold;
-        color: $light-white;
+        color: #ffffff;
     }
     &__p{
-        color: $light-white;
+        color: #ffffff;
     }
 
     &__nav{
-        color: $light-white;
+        color: #ffffff;
         text-align: left;
         @include media-breakpoint-up(md){
             text-align: right;
@@ -45,6 +45,9 @@
         flex-direction: row;
         gap: 1rem;
         margin-top: 1rem;
+        & a{
+            color: #ffffff;
+        }
         @include media-breakpoint-up(md){
             flex-direction: column;
             row-gap: 0.5rem;

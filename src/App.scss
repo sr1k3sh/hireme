@@ -115,10 +115,12 @@ $light-white: #B6CBE1;
 @import './components//toolcard';
 @import './components/getmail';
 @import './components/footer';
-
+@import './components/projectcard';
+@import './components/myprojects';
 
 .form-control{
     padding: 0.7rem 1rem;
+    background: #B6CBE1;
 }
 .form-label{
     font-weight: bold;

@@ -18,6 +18,15 @@ function Banner(){
         });
     }
 
+    const onHireClick = (e) =>{
+        e.preventDefault();
+        const myContactForm = document.getElementsByClassName("getmail__container")[0];
+        myContactForm.scrollIntoView({
+            behavior:'smooth',
+            block:'start'
+        })
+    }
+
     return(
         <React.Fragment>
             <section className="container-xl">
@@ -30,7 +39,7 @@ function Banner(){
                         Always.</p>
                         <div className="banner__buttons">
                             <div className="banner__main-buttons">
-                                <Button btnText='HIRE ME' ></Button>
+                                <Button btnText='HIRE ME' onClick={onHireClick}></Button>
                                 <Button outline={true} btnText='VIEW SERVICES' onClick={onServiceClick}></Button>
                             </div>
                             <div className="banner__main-links">

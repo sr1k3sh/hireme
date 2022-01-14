@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer(){
     return(
@@ -40,10 +41,11 @@ export default function Footer(){
                     <nav className="rikesh-footer__nav col-xl-4">
                         <span className="rikesh-footer__span">quick links</span>
                         <ul className="rikesh-footer__quicklinks">
-                            <li>Home</li>
-                            <li>Projects</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About me</Link></li>
+                            <li><Link to="/">Projects</Link></li>
+                            <li><Link to="/">Blog</Link></li>
+                            <li><Link to="/">Contact</Link></li>
                         </ul>
                     </nav>
                 </div>
